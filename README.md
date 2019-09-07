@@ -49,7 +49,7 @@
  ### Items
  //dimmer<br>
  Dimmer              dimmer             {channel="qbus:dimmer:CTD1:1:brightness"} <br>
- //bistabiel, timers, mono, interval
+ //bistabiel, timers, mono, interval, scene <br>
  Switch              Bistabiel1         {channel="qbus:onOff:CTD1:2:switch"}<br>
  //thermostat<br>
  Number:Temperature  thSP"[%.1f °C]"    {channel="qbus:thermostat:CTD1:8:setpoint"}<br>
