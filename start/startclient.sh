@@ -9,6 +9,6 @@ exec 1>/home/pi/clientlog.log 2>&1
 sleep 30
 
 #Start de Qbus Client
-cd /home/pi/QbusClient
+cd /home/pi/QbusOpenHab/QbusClient
 mono QbusClient.exe 192.168.75.7 QBUS QBUS 002064 &
 #mono ConsoleApp1.exe 192.168.13.55 QBUS QBUS 003893 &
