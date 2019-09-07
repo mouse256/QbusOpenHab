@@ -2,7 +2,7 @@
  This is the openHAB test binding for Qbus.
  The binding can't communicate directly to the Qbus controller but uses a client server application.
  
- ## Prerequiaries
+ ## Prerequieries
  Your controller must be activated for the DLL, call Qbus support to enable this.
  Your QDB should contain at least 1 thermostat, 1 dimmer, 1 bistabiel, 1 thermostat and 1 scene.
  
