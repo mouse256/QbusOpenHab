@@ -7,7 +7,7 @@
  Your QDB should contain at least 1 thermostat, 1 dimmer, 1 bistabiel, 1 thermostat and 1 scene.
  
  ## Client & Server
- The client & Server applications are written in vb.net and uses the Qbus DLL tom communicate with the Qbus controller.
+ The client & Server applications are written in vb.net and uses the Qbus DLL to communicate with the Qbus controller.
  If you want to run these on a raspberry pi you must first install mono with the vb addon:
  
  `sudo apt-get install mono-runtime mono-vbnc mono-complete`
@@ -26,7 +26,7 @@
  `mono QbusClient.exe 192.168.75.7 QBUS QBUS 002064`
  
  ### Starting at boot
- You can dwnload the files under start and change the clientfile with you controller credentials.
+ You can download the files under start and change the clientfile with you controller credentials.
  The you can add the files to crontab to start at boot.
  
  ## JAR file
