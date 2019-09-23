@@ -34,25 +34,17 @@
  
  ## Example files
  ### Things
- `
- Bridge qbus:bridge:CTD1 [ addr="localhost", port=2004, refresh=300 ] {
- dimmer      1       "Dimmer1"             [ dimmerId=1 ]
- 
- onOff       2       "Bistabiel1"          [ bistabielId=2 ]
- 
- onOff       3       "Timer1"              [ bistabielId=3 ]
- 
- onOff       4       "Timer2"              [ bistabielId=4 ]
- 
- onOff       5       "Timer3"              [ bistabielId=4 ]
- 
- onOff       6       "Mono1"               [ bistabielId=5 ]
- 
- onOff       7       "Interval1"           [ bistabielId=6 ]
- thermostat  8       "Thermostat1"         [ thermostatId=7 ]
- scene       9       "Scene1"              [ sceneId=1 ]
- 
- } 
+ `Bridge qbus:bridge:CTD1 [ addr="localhost", port=2004, refresh=300 ] {`
+ ` dimmer      1       "Dimmer1"             [ dimmerId=1 ]`
+`  onOff       2       "Bistabiel1"          [ bistabielId=2 ]`
+`  onOff       3       "Timer1"              [ bistabielId=3 ]`
+`  onOff       4       "Timer2"              [ bistabielId=4 ]`
+`  onOff       5       "Timer3"              [ bistabielId=4 ]`
+`  onOff       6       "Mono1"               [ bistabielId=5 ]`
+`  onOff       7       "Interval1"           [ bistabielId=6 ]`
+`  thermostat  8       "Thermostat1"         [ thermostatId=7 ]`
+`  scene       9       "Scene1"              [ sceneId=1 ]`
+` } `
  `
  
 
