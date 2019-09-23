@@ -4,7 +4,7 @@
  
  ## Prerequieries
  Your controller must be activated for the DLL, call Qbus support to enable this.
- Your QDB should contain at least 1 thermostat, 1 dimmer, 1 bistabiel, 1 thermostat and 1 scene.
+ Your QDB should contain at least 1 thermostat, 1 dimmer, 1 bistabiel, 1 thermostat, one HVAC and 1 scene.
  
  ## Client & Server
  The client & Server applications are written in vb.net and uses the Qbus DLL to communicate with the Qbus controller.
