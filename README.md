@@ -34,7 +34,8 @@
  
  ## Example files
  ### Things
- `Bridge qbus:bridge:CTD1 [ addr="localhost", port=2004, refresh=300 ] {
+ `
+ Bridge qbus:bridge:CTD1 [ addr="localhost", port=2004, refresh=300 ] {
  dimmer      1       "Dimmer1"             [ dimmerId=1 ]
  
  onOff       2       "Bistabiel1"          [ bistabielId=2 ]
@@ -51,7 +52,8 @@
  thermostat  8       "Thermostat1"         [ thermostatId=7 ]
  scene       9       "Scene1"              [ sceneId=1 ]
  
- } `
+ } 
+ `
  
 
  
