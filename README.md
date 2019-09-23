@@ -34,7 +34,8 @@
  
  ## Example files
  ### Things
- ```Bridge qbus:bridge:CTD1 [ addr="localhost", port=2004, refresh=300 ] {\n
+ ```
+ Bridge qbus:bridge:CTD1 [ addr="localhost", port=2004, refresh=300 ] {\n
   dimmer      1       "Dimmer1"             [ dimmerId=1 ]
   onOff       2       "Bistabiel1"          [ bistabielId=2 ]
   onOff       3       "Timer1"              [ bistabielId=3 ]
@@ -51,7 +52,8 @@
 
  
  ### Items
-  `//dimmer
+ ```
+ //dimmer
  Dimmer              dimmer             {channel="qbus:dimmer:CTD1:1:brightness"}
  //bistabiel, timers, mono, interval, scene
  Switch              Bistabiel1         {channel="qbus:onOff:CTD1:2:switch"}
@@ -59,4 +61,4 @@
  Number:Temperature  thSP"[%.1f °C]"    {channel="qbus:thermostat:CTD1:8:setpoint"}
  Number:Temperature	 thCT"[%.1f °C]"    {channel="qbus:thermostat:CTD1:8:measured"}
  Number              thMODE             {channel="qbus:thermostat:CTD1:8:mode",ihc="0x33c311" , autoupdate="true"}
- `
+ ```
