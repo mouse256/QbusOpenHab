@@ -4,7 +4,7 @@
  
  ## Prerequieries
  Your controller must be activated for the DLL, call Qbus support to enable this.
- Your QDB should contain at least 1 thermostat, 1 dimmer, 1 bistabiel, 1 thermostat and 1 scene.
+ Your QDB should contain at least 1 thermostat, 1 dimmer, 1 bistabiel, 1 thermostat, one HVAC and 1 scene.
  
  ## Client & Server
  The client & Server applications are written in vb.net and uses the Qbus DLL to communicate with the Qbus controller.
@@ -34,24 +34,36 @@
  
  ## Example files
  ### Things
- Bridge qbus:bridge:CTD1 [ addr="localhost", port=2004, refresh=300 ] {<br>
- dimmer      1       "Dimmer1"             [ dimmerId=1 ]<br>
- onOff       2       "Bistabiel1"          [ bistabielId=2 ]<br>
- onOff       3       "Timer1"              [ bistabielId=3 ]<br>
- onOff       4       "Timer2"              [ bistabielId=4 ]<br>
- onOff       5       "Timer3"              [ bistabielId=4 ]<br>
- onOff       6       "Mono1"               [ bistabielId=5 ]<br>
- onOff       7       "Interval1"           [ bistabielId=6 ]<br>
- thermostat  8       "Thermostat1"         [ thermostatId=7 ]<br>
- scene       9       "Scene1"              [ sceneId=1 ]<br>
- }<br>
+ ```
+ Bridge qbus:bridge:CTD1 [ addr="localhost", port=2004, refresh=300 ] {\n
+  dimmer      1       "Dimmer1"             [ dimmerId=1 ]
+  onOff       2       "Bistabiel1"          [ bistabielId=2 ]
+  onOff       3       "Timer1"              [ bistabielId=3 ]
+  onOff       4       "Timer2"              [ bistabielId=4 ]
+  onOff       5       "Timer3"              [ bistabielId=4 ]
+  onOff       6       "Mono1"               [ bistabielId=5 ]
+  onOff       7       "Interval1"           [ bistabielId=6 ]
+  thermostat  8       "Thermostat1"         [ thermostatId=7 ]
+  scene       9       "Scene1"              [ sceneId=1 ]
+  co2			      10	     "Productie"		         [ co2Id=26 ]
+ } 
+ ```
+ 
+ 
+
  
  ### Items
- //dimmer<br>
- Dimmer              dimmer             {channel="qbus:dimmer:CTD1:1:brightness"} <br>
- //bistabiel, timers, mono, interval, scene <br>
- Switch              Bistabiel1         {channel="qbus:onOff:CTD1:2:switch"}<br>
- //thermostat<br>
- Number:Temperature  thSP"[%.1f °C]"    {channel="qbus:thermostat:CTD1:8:setpoint"}<br>
- Number:Temperature	 thCT"[%.1f °C]"    {channel="qbus:thermostat:CTD1:8:measured"}<br>
- Number              thMODE             {channel="qbus:thermostat:CTD1:8:mode",ihc="0x33c311" , autoupdate="true"}<br>
+ ```
+ //dimmer
+ Dimmer              dimmer             {channel="qbus:dimmer:CTD1:1:brightness"}
+ //bistabiel, timers, mono, interval, scene
+ Switch              Bistabiel1         {channel="qbus:onOff:CTD1:2:switch"}
+ //thermostat
+ Number:Temperature  thSP"[%.1f °C]"    {channel="qbus:thermostat:CTD1:8:setpoint"}
+ Number:Temperature	 thCT"[%.1f °C]"    {channel="qbus:thermostat:CTD1:8:measured"}
+ Number              thMODE             {channel="qbus:thermostat:CTD1:8:mode",ihc="0x33c311" , autoupdate="true"}
+ //scene
+ Scene     Toonzaal230V                 {channel="qbus:scene:CTD1:36:scene"}
+ //CO2
+ Number				ProductieCO2                 {channel="qbus:co2:CTD1:100:co2"}
+ ```
