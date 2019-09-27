@@ -63,7 +63,7 @@
  Number:Temperature	 thCT"[%.1f °C]"    {channel="qbus:thermostat:CTD1:8:measured"}
  Number              thMODE             {channel="qbus:thermostat:CTD1:8:mode",ihc="0x33c311" , autoupdate="true"}
  //scene
- Scene     Toonzaal230V                 {channel="qbus:scene:CTD1:36:scene"}
+ Switch     Toonzaal230V                 {channel="qbus:scene:CTD1:36:scene"}
  //CO2
  Number				ProductieCO2                 {channel="qbus:co2:CTD1:100:co2"}
  ```
